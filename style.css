@@ -37,14 +37,10 @@ ul{
 }
 
 .hero {
-  background-image: url(img/ban1.jpg);
   height: 80vh;
   width: 100%;
-  background-position: center;
-  background-size: cover;
   display: flex;
   align-items: center;
-  background-attachment: fixed;
   position: relative;
   color: white;
 }
