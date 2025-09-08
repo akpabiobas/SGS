@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sommaville Gateway Services</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/font-awesome-4@4.7.4/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <style>
+      /* Additional styles for the collapsible section */
+      .collapse-header {
+        cursor: pointer;
+        padding: 15px;
+        background-color: #f8f9fa;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.3s ease;
+      }
+
+      .collapse-header:hover {
+        background-color: #e9ecef;
+      }
+
+      .collapse-header h3 {
+        margin: 0;
+        color: #0f2c59;
+      }
+
+      .collapse-icon {
+        transition: transform 0.3s ease;
+      }
+
+      .collapse-header.collapsed .collapse-icon {
+        transform: rotate(180deg);
+      }
+
+      .vacancy-content {
+        padding: 20px;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Animation for smooth collapsing */
+      .vacancy-collapse {
+        transition: height 0.3s ease;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+      <img src="img/loader.svg" alt="" />
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark py-3">
+      <div class="container">
+        <a class="navbar-brand" href="">SGS</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                >Home
+                <div class="underline"></div>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about"
+                >About Us
+                <div class="underline"></div
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#vacancy"
+                >Join Us
+                <div class="underline"></div
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#values">
+                Values
+                <div class="underline"></div
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services"
+                >Services
+                <div class="underline"></div
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact"
+                >Contact Us
+                <div class="underline"></div
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="intro p-5 mb-5">
+      <div class="intro-text" data-aos="zoom-in">
+        <h3 class="mb-3">
+          Empowering Businesses, Supporting Healthcare, and Enhancing
+          Communities
+        </h3>
+        <p class="lead mb-3">
+          At Sommaville Gateway Services Limited, we provide expert management
+          consultancy, healthcare recruitment, and professional cleaning
+          services. Our mission is to help organisations succeed, support
+          healthcare providers with reliable staff, and maintain safe, welcoming
+          environments through dependable cleaning solutions.
+        </p>
+        <a href="#contact" class="btn">GET STARTED</a>
+      </div>
+    </div>
+
+    <!-- Pillars Section -->
+    <section id="pilars">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 col-lg-4 col-md-6 mb-3">
+            <div
+              class="pillars-card p-5 text-center"
+              data-aos="fade-up"
+              data-aos-easing="linear"
+            >
+              <i class="fa fa-bar-chart mb-3" aria-hidden="true"></i>
+              <p class="pillar-name mb-3">Business & Management Support</p>
+              <p class="pillar-details mb-3">
+                Us above, shall seasons earth open void set greater him waters
+                gathered void together given won't she'd from female moveth.
+              </p>
+              <button class="btn btn-pillar">Learn More</button>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4 col-md-6 mb-3">
+            <div
+              class="pillars-card p-5 text-center"
+              data-aos="fade-up"
+              data-aos-delay="100"
+              data-aos-easing="linear"
+            >
+              <i class="fa fa-medkit mb-3" aria-hidden="true"></i>
+              <p class="pillar-name mb-3">Healthcare Recruitment & Staffing</p>
+              <p class="pillar-details mb-3">
+                Us above, shall seasons earth open void set greater him waters
+                gathered void together given won't she'd from female moveth.
+              </p>
+              <button class="btn btn-pillar">Learn More</button>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4 col-md-6 mb-3">
+            <div
+              class="pillars-card p-5 text-center"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-easing="linear"
+            >
+              <i class="fa fa-building mb-3" aria-hidden="true"></i>
+              <p class="pillar-name mb-3">Facilities & Cleaning Services</p>
+              <p class="pillar-details mb-3">
+                Us above, shall seasons earth open void set greater him waters
+                gathered void together given won't she'd from female moveth.
+              </p>
+              <button class="btn btn-pillar">Learn More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Partner with us Section -->
+    <section class="partner-section py-5" id="partner" data-aos="fade-up">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8 text-center">
+            <h2 class="mb-4 heading text-light">Partner With Us Today</h2>
+            <p class="lead mb-4">
+              We're here to support your growth and success.
+            </p>
+
+            <button class="btn btn-contact p-3">Contact Us Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-us p-5" id="about">
+      <div class="container">
+        <h2
+          class="text-center mb-3 heading"
+          data-aos="fade-up"
+          data-aos-easing="linear"
+        >
+          About Us
+        </h2>
+        <div class="row mb-3">
+          <div
+            class="col-12 col-lg-6 col-md-6 p-5"
+            data-aos="fade-up"
+            data-aos-easing="linear"
+          >
+            <h4 class="mb-3">Who We Are</h4>
+            <p class="lead">
+              Sommaville Gateway Services Limited is an ethical consultancy and
+              service provider bridging the gap between business, healthcare,
+              and community support. We are committed to integrity, innovation,
+              and impact in every service we deliver.
+            </p>
+          </div>
+          <div class="col-12 col-lg-6 col-md-6">
+            <img
+              src="img/img1.jpg"
+              alt="Three women talking"
+              class="img-fluid"
+              data-aos="fade-up"
+              data-aos-delay="100"
+              data-aos-easing="linear"
+            />
+          </div>
+        </div>
+        <div class="row" data-aos="fade-up" data-aos-easing="linear">
+          <div class="col-12 col-lg-6 col-md-6 mb-3">
+            <div class="vision p-3">
+              <i class="fa fa-eye mr-2" aria-hidden="true"></i>
+              <span class="vision-title">Our Vision</span>
+              <p class="vision-text">
+                To be a trusted partner in business, health, and social care —
+                delivering solutions that combine innovation, compassion, and
+                measurable results.
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 col-md-6">
+            <div class="mission p-3">
+              <i class="fa fa-pencil-square-o mr-2" aria-hidden="true"></i>
+              <span class="mission-title">Our Mission</span>
+              <p class="mission-text">
+                To empower organisations, support communities, and enhance
+                workplace and healthcare environments through tailored
+                consultancy, staffing, and cleaning solutions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Our Values Section -->
+    <section class="values p-5" id="values">
+      <div class="container">
+        <h1
+          class="text-center mb-5 heading"
+          data-aos="fade-up"
+          data-aos-easing="linear"
+        >
+          Our Core Values
+        </h1>
+        <div class="row">
+          <div class="col-12 col-lg-3 col-md-6">
+            <div
+              class="values-card text-center p-4 mb-3"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <i class="fa fa-balance-scale mb-3" aria-hidden="true"></i>
+              <h4 class="value-name mb-3">Integrity</h4>
+              <p class="values-details">Transparent and ethical in all we do</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3 col-md-6">
+            <div
+              class="values-card text-center p-4 mb-3"
+              data-aos="fade-up"
+              data-aos-delay="100"
+              data-aos-easing="linear"
+            >
+              <i class="fa fa-balance-scale mb-3" aria-hidden="true"></i>
+              <h4 class="value-name mb-3">Innovation</h4>
+              <p class="values-details">
+                Driving progress with creativity and technology
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3 col-md-6">
+            <div
+              class="values-card text-center p-4 mb-3"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-easing="linear"
+            >
+              <i class="fa fa-globe mb-3" aria-hidden="true"></i>
+              <h4 class="value-name mb-3">Inclusivity</h4>
+              <p class="values-details">Ensuring no one is left behind</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3 col-md-6">
+            <div
+              class="values-card text-center p-3 mb-3"
+              data-aos="fade-up"
+              data-aos-delay="300"
+              data-aos-easing="linear"
+            >
+              <i class="fa fa-globe mb-3" aria-hidden="true"></i>
+              <h4 class="value-name mb-3">Impact</h4>
+              <p class="values-details">
+                Delivering measurable results for people and organisations
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Services Section -->
+    <section class="services p-5" id="services">
+      <div class="container">
+        <h1
+          class="text-center mb-5 heading"
+          data-aos="fade-up"
+          data-aos-easing="linear"
+        >
+          Our Services
+        </h1>
+        <div class="row mb-5" data-aos="fade-up" data-aos-easing="linear">
+          <div class="col-12 col-lg-6 col-md-6 mb-3">
+            <h3 class="heading">Business & Management Support</h3>
+            <p>
+              We help organisations grow, adapt, and succeed in today's
+              fast-changing environment.
+            </p>
+            <ul>
+              <li>Strategic and operational consultancy</li>
+              <li>Business process optimisation and compliance support</li>
+              <li>Project management and digital transformation solutions</li>
+              <li>HR and people management consultancy</li>
+            </ul>
+            <span
+              ><b>Goal:</b
+              ><span
+                >Make complex business challenges simple, so you can focus on
+                growth
+              </span>
+            </span>
+          </div>
+          <div class="col-12 col-lg-6 col-md-6">
+            <img
+              src="img/img2.jpg"
+              alt="Two men and a woman in a meeting"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+        <div class="row mb-5" data-aos="fade-up" data-aos-easing="linear">
+          <div class="col-12 col-lg-6 col-md-6 mb-3">
+            <img
+              src="img/img3.jpg"
+              alt="Two men and a woman in a meeting"
+              class="img-fluid"
+            />
+          </div>
+          <div class="col-12 col-lg-6 col-md-6">
+            <h3 class="heading">Healthcare Recruitment & Staffing</h3>
+            <p>
+              We provide reliable, ethical, and flexible staffing solutions for
+              the healthcare sector.
+            </p>
+            <ul>
+              <li>
+                Recruitment of healthcare support staff (healthcare assistants,
+                support workers)
+              </li>
+              <li>Temporary and permanent staffing solutions</li>
+              <li>
+                Workforce management for hospitals, clinics, and care
+                organisations
+              </li>
+              <li>
+                Partnerships with healthcare providers to meet staffing needs
+                quickly and effectively
+              </li>
+            </ul>
+            <span
+              ><b>Goal:</b>Support healthcare organisations with quality,
+              ethical recruitment solutions for non-clinical and administrative
+              roles, ensuring efficient operations and reliable team
+              support.</span
+            >
+          </div>
+        </div>
+        <div class="row" data-aos="fade-up" data-aos-easing="linear">
+          <div class="col-12 col-lg-6 col-md-6 mb-3">
+            <h3 class="heading">Facilities & Cleaning Services</h3>
+            <p>
+              We deliver professional cleaning and facilities support services
+              that help businesses and organisations maintain safe, clean, and
+              welcoming environments.
+            </p>
+            <ul>
+              <li>Office and commercial cleaning</li>
+              <li>Healthcare facility cleaning (non-clinical)</li>
+              <li>Residential block and communal area cleaning</li>
+              <li>
+                Tailored facilities support solutions for organisations of all
+                sizes
+              </li>
+            </ul>
+            <span
+              ><b>Goal:</b>Provide dependable cleaning and support services that
+              enhance workplace and community wellbeing.</span
+            >
+          </div>
+          <div class="col-12 col-lg-6 col-md-6">
+            <img
+              src="img/img4.png"
+              alt="Two men and a woman in a meeting"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Vacancy Section -->
+    <section class="vacancy p-5" id="vacancy">
+      <div class="container">
+        <div data-aos="fade-up" data-aos-easing="linear">
+          <h2 class="text-center mb-3 heading">Join Our Team</h2>
+          <p class="text-center mb-3">
+            Sommaville Gateway Services Limited is always looking for motivated
+            individuals to join our growing team. We offer opportunities in:
+          </p>
+        </div>
+
+        <div class="row">
+          <div class="col-12 col-lg-4 col-md-6">
+            <div
+              class="vacancy-card text-center p-4 mb-3"
+              data-aos="fade-up"
+              data-aos-easing="linear"
+            >
+              <i class="fa fa-user-md mb-3" aria-hidden="true"></i>
+              <h4 class="vacancy-name mb-3">Healthcare support assistants</h4>
+              <p class="vacancy-details mb-2">
+                Us above, shall seasons earth open void set greater him waters
+                gathered void together given won't she'd from female moveth.
+              </p>
+              <a href="" class="btn btn-vacancy">Apply Now</a>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4 col-md-6">
+            <div
+              class="vacancy-card text-center p-4 mb-3"
+              data-aos="fade-up"
+              data-aos-delay="100"
+              data-aos-easing="linear"
+            >
+              <i class="fa fa-briefcase mb-3" aria-hidden="true"></i>
+              <h4 class="vacancy-name mb-3">
+                Business consultancy and administration
+              </h4>
+              <p class="vacancy-details mb-2">
+                Us above, shall seasons earth open void set greater him waters
+                gathered void together given won't she'd from female moveth.
+              </p>
+              <a href="" class="btn btn-vacancy">Apply Now</a>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-4 col-md-6">
+            <div
+              class="vacancy-card text-center p-4"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-easing="linear"
+            >
+              <i class="fa fa-home" aria-hidden="true"></i>
+              <h4 class="vacancy-name mb-3">Cleaning and facilities support</h4>
+              <p class="vacancy-details mb-2">
+                Us above, shall seasons earth open void set greater him waters
+                gathered void together given won't she'd from female moveth.
+              </p>
+              <a href="" class="btn btn-vacancy">Apply Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Current Vacancy Section -->
+    <section
+      id="current-vacancy"
+      class="p-5"
+      data-aos="fade-up"
+      data-aos-easing="linear"
+    >
+      <div class="container">
+        <div class="collapse-header" id="vacancyCollapseHeader">
+          <h3 class="heading">Current Vacancies</h3>
+          <span class="collapse-icon">
+            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+          </span>
+        </div>
+
+        <div class="vacancy-collapse" id="vacancyCollapse">
+          <div class="vacancy-content">
+            <div class="row">
+              <div class="col-12 col-lg-6 col-md-12">
+                <div class="current-vacancy-card p-3 mb-3">
+                  <h4 class="mb-4 vacancy-title">
+                    Experienced Growth Marketer
+                  </h4>
+
+                  <div class="d-flex flex-wrap gap-3 mb-4">
+                    <div class="vacancy-location mr-3 p-2 mb-3">
+                      <span>Lagos</span>
+                    </div>
+                    <div class="vacancy-type mr-3 p-2 mb-3">
+                      <span>Full Time</span>
+                    </div>
+                    <div class="vacancy-income mr-3 p-2">
+                      <span>NGN 75,000- 150,000</span>
+                    </div>
+                  </div>
+                  <p class="job-function mb-2">
+                    Job Function : Marketing & Communication
+                  </p>
+                  <a href="" class="btn btn-current-vacancy">Apply Now</a>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6 col-md-12">
+                <div class="current-vacancy-card p-3 mb-3">
+                  <h4 class="mb-4 vacancy-title">Experienced Driver</h4>
+                  <div class="d-flex flex-wrap gap-3 mb-4">
+                    <div class="vacancy-location mr-3 p-2 mb-3">
+                      <span>Lagos</span>
+                    </div>
+                    <div class="vacancy-type mr-3 p-2 mb-3">
+                      <span>Full Time</span>
+                    </div>
+                    <div class="vacancy-income mr-3 p-2">
+                      <span>NGN 75,000- 150,000</span>
+                    </div>
+                  </div>
+                  <p class="job-function mb-2">
+                    Job Function : Driver & Transport Services
+                  </p>
+                  <a href="" class="btn btn-current-vacancy">Apply Now</a>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6 col-md-12">
+                <div class="current-vacancy-card p-3 mb-3">
+                  <h4 class="mb-4 vacancy-title">
+                    Social Media & Content Assistant
+                  </h4>
+                  <div class="d-flex flex-wrap gap-3 mb-4">
+                    <div class="vacancy-location mr-3 p-2 mb-3">
+                      <span>Lagos</span>
+                    </div>
+                    <div class="vacancy-type mr-3 p-2 mb-3">
+                      <span>Full Time</span>
+                    </div>
+                    <div class="vacancy-income mr-3 p-2">
+                      <span>NGN 75,000- 150,000</span>
+                    </div>
+                  </div>
+                  <p class="job-function mb-2">
+                    Job Function : Creative & Design
+                  </p>
+                  <a href="" class="btn btn-current-vacancy">Apply Now</a>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6 col-md-12">
+                <div class="current-vacancy-card p-3 mb-3">
+                  <h4 class="mb-4 vacancy-title">Facility Manager</h4>
+                  <div class="d-flex flex-wrap gap-3 mb-4">
+                    <div class="vacancy-location mr-3 p-2 mb-3">
+                      <span>Lagos</span>
+                    </div>
+                    <div class="vacancy-type mr-3 p-2 mb-3">
+                      <span>Full Time</span>
+                    </div>
+                    <div class="vacancy-income mr-3 p-2">
+                      <span>NGN 75,000- 150,000</span>
+                    </div>
+                  </div>
+                  <p class="job-function mb-2">
+                    Job Function : Product & Project Manager
+                  </p>
+                  <a href="" class="btn btn-current-vacancy">Apply Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Application Section -->
+    <section class="application-section p-5">
+      <div class="container">
+        <div class="application rounded">
+          <div class="row">
+            <div class="col-12 col-lg-6 col-md-6 mb-3" data-aos="zoom-in">
+              <h3 class="heading mb-4 heading">How to Apply</h3>
+              <p>Send your CV and a short cover letter to:</p>
+              <div class="d-flex align-items-center mb-4">
+                <i
+                  class="fa fa-envelope-o mr-3 text-dark"
+                  aria-hidden="true"
+                ></i>
+                <h4 class="mb-0 application-email">
+                  careers@sommavillegatewayservices.com
+                </h4>
+              </div>
+              <p>Or fill out our online application form.</p>
+              <a href="#contact" class="btn btn-submit p-2 mt-3">Apply Today</a>
+            </div>
+            <div class="col-12 col-lg-6 col-md-6" data-aos="zoom-in">
+              <img src="img/img5.jpg" alt="" width="100%" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section
+      class="p-5"
+      id="contact"
+      data-aos="zoom-in"
+      data-aos-easing="linear"
+    >
+      <div class="container">
+        <h2 class="text-center mb-2 heading">Get in Touch</h2>
+        <p class="text-center mb-5">
+          We'd love to hear from you. Whether you need consultancy support,
+          healthcare staffing, or cleaning services, our team is ready to help.
+        </p>
+        <div class="row mb-5">
+          <div class="col-md-4">
+            <div class="contact-info-box text-center mb-3">
+              <div class="contact-icon">
+                <i class="fa fa-map-marker mb-2" aria-hidden="true"></i>
+              </div>
+              <h4>Office Address</h4>
+              <p>42 Silton Street, Manchester, M9 4NS</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="contact-info-box text-center mb-3">
+              <div class="contact-icon">
+                <i class="fa fa-phone mb-2" aria-hidden="true"></i>
+              </div>
+              <h4>Phone</h4>
+              <p>07786 440195</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="contact-info-box text-center mb-3">
+              <div class="contact-icon">
+                <i class="fa fa-envelope-o mb-2" aria-hidden="true"></i>
+              </div>
+              <h4>Email</h4>
+              <p>admin@sommavillegatewayservices.com</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="card shadow">
+              <div class="card-body p-5">
+                <h3 class="heading mb-4">Send us a Message</h3>
+                <form>
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label for="name" class="form-label"
+                        >Name <span class="text-danger">*</span></label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="name"
+                        required
+                      />
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label for="email" class="form-label"
+                        >Email <span class="text-danger">*</span></label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="phone" class="form-label">Phone</label>
+                    <input type="tel" class="form-control" id="phone" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="message" class="form-label"
+                      >Message <span class="text-danger">*</span></label
+                    >
+                    <textarea
+                      class="form-control"
+                      id="message"
+                      rows="5"
+                      required
+                    ></textarea>
+                  </div>
+                  <a type="submit" class="btn p-2 btn-submit"> Submit </a>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="p-5">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-12 col-lg-3 col-md-6 mb-3"
+            data-aos="zoom-in"
+            data-aos-easing="linear"
+          >
+            <a href=""><h3>SGS</h3></a>
+            <p>
+              Sommaville Gateway Services Limited is an ethical consultancy and
+              service provider bridging the gap between business, healthcare,
+              and community support. We are committed to integrity, innovation,
+              and impact in every service we deliver.
+            </p>
+          </div>
+          <div
+            class="col-12 col-lg-3 col-md-6 mb-3"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+            data-aos-easing="linear"
+          >
+            <h3>Navigation</h3>
+            <a href="#home">Home</a><br />
+            <a href="#about">About Us</a><br />
+            <a href="#vacancy">Vacancy</a><br />
+            <a href="#services">Our Services</a><br />
+            <a href="#contact">Contact</a><br />
+          </div>
+          <div
+            class="col-12 col-lg-3 col-md-6 mb-3"
+            data-aos="zoom-in"
+            data-aos-delay="200"
+            data-aos-easing="linear"
+          >
+            <h3>Services</h3>
+            <p>Business & Management Support</p>
+            <p>Healthcare Recruitment & Staffing</p>
+            <p>Facilities & Cleaning Services</p>
+          </div>
+          <div
+            class="col-12 col-lg-3 col-md-6 mb-3"
+            data-aos="zoom-in"
+            data-aos-delay="300"
+            data-aos-easing="linear"
+          >
+            <div class="contact-us">
+              <h3>Contact Us</h3>
+              <p>42 Silton Street, Manchester, M9 4NS</p>
+              <a href="tel:+447786 440195">07786 440195</a>
+              <a href="mailto:admin@sommavillegatewayservices.com"
+                >admin@sommavillegatewayservices.com</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+
+      // Collapsible functionality for current vacancies
+      document.addEventListener('DOMContentLoaded', function () {
+        const collapseHeader = document.getElementById('vacancyCollapseHeader');
+        const collapseContent = document.getElementById('vacancyCollapse');
+
+        // Set initial state (expanded by default)
+        let isCollapsed = false;
+        collapseContent.style.height = collapseContent.scrollHeight + 'px';
+
+        collapseHeader.addEventListener('click', function () {
+          if (isCollapsed) {
+            // Expand
+            collapseContent.style.height = collapseContent.scrollHeight + 'px';
+            collapseHeader.classList.remove('collapsed');
+          } else {
+            // Collapse
+            collapseContent.style.height = '0';
+            collapseHeader.classList.add('collapsed');
+          }
+          isCollapsed = !isCollapsed;
+        });
+
+        // Handle window resize to adjust height if needed
+        window.addEventListener('resize', function () {
+          if (!isCollapsed) {
+            collapseContent.style.height = 'auto';
+            const newHeight = collapseContent.scrollHeight;
+            collapseContent.style.height = newHeight + 'px';
+          }
+        });
+      });
+
+      setTimeout(
+        () => (document.getElementById('preloader').style.display = 'none'),
+        3000
+      );
+    </script>
+  </body>
+</html>
