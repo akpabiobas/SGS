@@ -16,50 +16,6 @@
       rel="stylesheet"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <style>
-      /* Additional styles for the collapsible section */
-      .collapse-header {
-        cursor: pointer;
-        padding: 15px;
-        background-color: #f8f9fa;
-        border-radius: 5px;
-        margin-bottom: 15px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        transition: all 0.3s ease;
-      }
-
-      .collapse-header:hover {
-        background-color: #e9ecef;
-      }
-
-      .collapse-header h3 {
-        margin: 0;
-        color: #0f2c59;
-      }
-
-      .collapse-icon {
-        transition: transform 0.3s ease;
-      }
-
-      .collapse-header.collapsed .collapse-icon {
-        transform: rotate(180deg);
-      }
-
-      .vacancy-content {
-        padding: 20px;
-        background-color: white;
-        border-radius: 5px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      }
-
-      /* Animation for smooth collapsing */
-      .vacancy-collapse {
-        transition: height 0.3s ease;
-        overflow: hidden;
-      }
-    </style>
   </head>
   <body>
     <!-- Preloader -->
@@ -137,7 +93,7 @@
           healthcare providers with reliable staff, and maintain safe, welcoming
           environments through dependable cleaning solutions.
         </p>
-        <a href="#contact" class="btn">GET STARTED</a>
+        <a href="#contact" class="btn p-2">GET STARTED</a>
       </div>
     </div>
 
@@ -732,7 +688,7 @@
                       required
                     ></textarea>
                   </div>
-                  <a type="submit" class="btn p-2 btn-submit"> Submit </a>
+                  <button type="submit" class="btn p-2 btn-submit">Submit</button>
                 </form>
               </div>
             </div>

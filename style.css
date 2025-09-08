@@ -51,13 +51,13 @@ p {
 .intro-text p {
   font-weight: 600;
 }
-.intro-text a{
+.intro-text a {
   background-color: #0f2c59;
   color: white;
   font-weight: 600;
   transition: 0.3s;
 }
-.intro-text a:hover{
+.intro-text a:hover {
   opacity: 0.7;
   color: white;
 }
@@ -234,6 +234,47 @@ p {
   color: white;
   box-shadow: 0 1px 10px rgba(15, 44, 89, 0.3);
 }
+.collapse-header {
+  cursor: pointer;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.collapse-header:hover {
+  background-color: #e9ecef;
+}
+
+.collapse-header h3 {
+  margin: 0;
+  color: #0f2c59;
+}
+
+.collapse-icon {
+  transition: transform 0.3s ease;
+}
+
+.collapse-header.collapsed .collapse-icon {
+  transform: rotate(180deg);
+}
+
+.vacancy-content {
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation for smooth collapsing */
+.vacancy-collapse {
+  transition: height 0.3s ease;
+  overflow: hidden;
+}
 .application-section {
   background-color: rgb(248, 249, 250);
 }
@@ -260,6 +301,9 @@ p {
   color: white;
   background-color: rgb(15, 44, 89);
   transition: all 0.3s;
+}
+.btn-submit:hover {
+  box-shadow: 0 1px 10px rgba(15, 44, 89, 0.3);
 }
 footer {
   background-color: rgb(15, 44, 89);
