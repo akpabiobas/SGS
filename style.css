@@ -8,6 +8,9 @@ body {
 p {
   margin: 0;
 }
+ul{
+  list-style-type: none;
+}
 .preloader {
   background-color: white;
   height: 100%;
@@ -187,6 +190,9 @@ p {
 }
 .services {
   background-color: rgb(248, 249, 250);
+}
+li .fa{
+  color: rgb(11, 146, 105);
 }
 .vacancy-card {
   background-color: white;
